@@ -1,10 +1,14 @@
 {
   "name": "bao.psmodule",
   "version": "1.0.0",
-  "description": "",
-  "author": "Andy D Toma",
-  "license": "ISC",
+  "description": "used mainly for gulp building",
+  "license": "MIT",
+  "repository": ".",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "del": "^2.2.0",
+    "graceful-fs": "^4.1.3",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "lodash": "^4.9.0"
   }
 }
