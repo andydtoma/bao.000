@@ -13,6 +13,15 @@
     <Copyright />
     <Description />
     <Guid>e6b19dec-f93f-4ad4-8d28-4eee6e761123</Guid>
+    <FormatsToProcess />
+    <FunctionsToProcess />
+    <ModuleList>mimi</ModuleList>
+    <ModuleToProcess />
+    <NestedModules />
+    <TypesToProcess />
+    <Version>1.0.0.0</Version>
+    <DebugArguments>
+    </DebugArguments>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -31,11 +40,19 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="BaoService\" />
+    <Folder Include="BaoCredential\" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="Bao.PSModule.psd1" />
     <Compile Include="Bao.PSModule.psm1" />
     <Compile Include="Bao.PSModule.tests.ps1" />
+    <Compile Include="BaoCredential\Get-BaoCredential.ps1" />
+    <Compile Include="BaoCredential\Register-BaoCredential.ps1" />
+    <Compile Include="BaoService\Get-BaoService.ps1" />
+    <Compile Include="Mimi.ps1" />
+    <Compile Include="package.json" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="Build" />

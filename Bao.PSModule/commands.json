@@ -1,0 +1,10 @@
+{
+  "commands": {
+    "Mimi": {
+      "fileName": "powershell.exe",
+      "workingDirectory": ".",
+      "arguments": "-ExecutionPolicy Bypass -File Mimi.ps1"
+    }
+  },
+  "-vs-binding": { "AfterBuild": [ "Mimi" ] }
+}
