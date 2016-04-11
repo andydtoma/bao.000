@@ -1,5 +1,5 @@
 #Specific ignores for this solution
-*.PSModule/*.psm1
+*.PSModule.psm1
 
 
 ## Ignore Visual Studio temporary files, build results, and

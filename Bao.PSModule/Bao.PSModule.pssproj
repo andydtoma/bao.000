@@ -46,7 +46,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bao.PSModule.psd1" />
-    <Compile Include="Bao.PSModule.psm1" />
     <Compile Include="BaoCredential\Get-BaoCredential.ps1" />
     <Compile Include="BaoCredential\Register-BaoCredential.ps1" />
     <Compile Include="BaoService\Get-BaoService.ps1" />
