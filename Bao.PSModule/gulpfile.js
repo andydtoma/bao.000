@@ -1,3 +1,4 @@
+/// <binding AfterBuild='scripts' />
 // include plug-ins
 var gulp = require('gulp');
 var concat = require('gulp-concat');

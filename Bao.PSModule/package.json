@@ -1,14 +1,13 @@
 {
   "name": "bao.psmodule",
   "version": "1.0.0",
-  "description": "used mainly for gulp building",
-  "license": "MIT",
-  "repository": ".",
+  "scripts": {
+    "node-install": "npm install --save-dev"
+  },
   "devDependencies": {
     "del": "^2.2.0",
-    "graceful-fs": "^4.1.3",
     "gulp": "^3.9.1",
-    "gulp-concat": "^2.6.0",
-    "lodash": "^4.9.0"
-  }
+    "gulp-concat": "^2.6.0"
+  },
+  "-vs-binding": { "ProjectOpened": [ "node-install" ] }
 }
