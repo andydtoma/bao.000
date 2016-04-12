@@ -50,11 +50,10 @@
     <Compile Include="BaoCredential\Get-BaoCredential.ps1" />
     <Compile Include="BaoCredential\Register-BaoCredential.ps1" />
     <Compile Include="BaoService\Get-BaoService.ps1" />
-    <Compile Include="PowerShellTest1.tests.ps1" />
+    <Compile Include="package.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="gulpfile.js" />
-    <Content Include="package.json" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="Build" />

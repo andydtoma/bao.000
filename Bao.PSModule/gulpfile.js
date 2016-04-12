@@ -6,7 +6,8 @@ var del = require('del');
 
 var config = {
     //Include all js files but exclude any min.js files
-    src: ['**/*.ps1', '!**/*.tests.ps1']
+    src: ['**/*.ps1', '!**/*.tests.ps1'],
+    regions: ['**']
 }
 
 //delete the output file(s)
@@ -29,3 +30,8 @@ gulp.task('scripts', ['clean'], function () {
 
 //Set a default tasks
 gulp.task('default', ['scripts'], function () { });
+
+gulp.task('copy-to-all', function () {
+    return gulp.src(['**/'])
+    .pipe(gulp.dest('obj/wwwroot'));
+});
