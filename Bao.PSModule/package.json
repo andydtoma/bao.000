@@ -2,12 +2,12 @@
   "name": "bao.psmodule",
   "version": "1.0.0",
   "scripts": {
-    "node-install": "npm install --save-dev"
+    "postinstall": "npm dedupe"
   },
   "devDependencies": {
     "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0"
   },
-  "-vs-binding": { "ProjectOpened": [ "node-install" ] }
+  "-vs-binding": { "ProjectOpened": [ "install", "postinstall" ] }
 }
