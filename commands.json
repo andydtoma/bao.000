@@ -1,0 +1,10 @@
+{
+  "commands": {
+    "prerequisites": {
+      "fileName": "powershell.exe",
+      "workingDirectory": ".",
+      "arguments": "-ExecutionPolicy Bypass -File prerequisites.ps1"
+    }
+  }
+
+}

@@ -3,12 +3,43 @@
 var gulp = require('gulp');
 var concat = require('gulp-concat');
 var del = require('del');
+var filelog = require('gulp-filelog');
+var fs = require('fs');
+var path = require('path');
 
 var config = {
     //Include all js files but exclude any min.js files
     src: ['**/*.ps1', '!**/*.tests.ps1'],
-    regions: ['**']
+    regions: ['**'],
+    obj: './obj',
+    reservedDirPattern: /\.vs|bin|obj|node_modules/i
 }
+
+
+function getFolders(dir) {
+    return fs.readdirSync(dir)
+      .filter(function (file) {
+          return fs.statSync(path.join(dir, file)).isDirectory();
+      })
+    .filter(function (file) {
+        return !file.match(config.reservedDirPattern);
+    });
+}
+
+
+gulp.task("clean-obj", function () {
+    return del(config.obj + '/**/*')
+});
+
+gulp.task("compile-regions", function () {
+    var folders = getFolders('.');
+    return folders.map(function (folder) {
+        return gulp.src(folder)
+        .pipe(filelog());
+
+    });
+});
+
 
 //delete the output file(s)
 gulp.task('clean', function () {
@@ -35,3 +66,4 @@ gulp.task('copy-to-all', function () {
     return gulp.src(['**/'])
     .pipe(gulp.dest('obj/wwwroot'));
 });
+
