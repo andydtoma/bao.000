@@ -6,11 +6,17 @@
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
     "gulp-filelog": "^0.4.1",
+    "gulp-insert": "^0.5.0",
     "gulp-util": "^3.0.7",
+    "merge-stream": "^1.0.0",
     "path": "^0.12.7"
   },
   "scripts": {
     "prerequisites": "npm install --save-dev"
   },
-  "-vs-binding": { "ProjectOpened": [ "prerequisites" ] }
+  "-vs-binding": {
+    "ProjectOpened": [
+      "prerequisites"
+    ]
+  }
 }

@@ -27,7 +27,7 @@ function Get-BaoService
 
         Process
         {
-          
+          'coucou bau'
         }
 
         End
