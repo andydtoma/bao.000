@@ -43,7 +43,6 @@
   <ItemGroup>
     <Folder Include="BaoService\" />
     <Folder Include="BaoCredential\" />
-    <Folder Include="VuParSidarte\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bao.PSModule.psd1" />
@@ -52,7 +51,6 @@
     <Compile Include="BaoService\Get-BaoService.ps1" />
     <Compile Include="BaoService\Test-BaoService.ps1" />
     <Compile Include="package.json" />
-    <Compile Include="VuParSidarte\Invoke-Sidarte.ps1" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="gulpfile.js" />
