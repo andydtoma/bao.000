@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
@@ -57,40 +57,4 @@
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Target Name="Build" />
-
-  <UsingTask TaskName="PowerShell" TaskFactory="CodeTaskFactory" AssemblyFile="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll">
-    <ParameterGroup>
-      <ScriptBlock ParameterType="System.String" Required="true" />
-    </ParameterGroup>
-    <Task>
-      <Reference Include="$(MSBuildToolsPath)\Microsoft.Build.Tasks.Core.dll"/>
-      <Code Type="Class" Language="cs">
-        <![CDATA[
-    public class PowerShell : Microsoft.Build.Tasks.Exec {
-        public string ScriptBlock {
-          set {
-            EchoOff=true;
-            Command = string.Format(
-              "@powershell \"Invoke-Command -ScriptBlock {{ $errorActionPreference='Stop'; {0} ; exit $LASTEXITCODE }} \"",
-              value.Replace("\"","\"\"").Replace("\r\n",";").Replace("\n",";").Replace("\r",";"));
-          }
-        }
-    }]]>
-      </Code>
-    </Task>
-  </UsingTask>
-
-  <PropertyGroup>
-    <MyTestScript>
-      $foo = 'Hello There'
-
-      "$foo  - script dir : $(MSBuildThisFileDirectory)" | Out-File 'c:\atelier\chan\mimi.txt'
-    </MyTestScript>
-  </PropertyGroup>
-
-  <Target Name="Build">
-    <PowerShell  ScriptBlock="$(MyTestScript)" />
-  </Target>
-
-
 </Project>
