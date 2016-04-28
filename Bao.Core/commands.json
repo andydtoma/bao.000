@@ -1,0 +1,10 @@
+{
+  "commands": {
+    "prereq": {
+      "fileName": "powershell.exe",
+      "workingDirectory": ".",
+      "arguments": "-ExecutionPolicy Bypass -File prereq.ps1"
+    }
+  }
+, "-vs-binding":{"BeforeBuild":["prereq"]}
+}
