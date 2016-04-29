@@ -1,0 +1,17 @@
+{
+  "name": "bao",
+  "version": "1.0.0",
+  "repository": "andydtoma/bao",
+  "author": "Andy D. Toma",
+  "license": "MIT",
+  "devDependencies": {
+    "del": "^2.2.0",
+    "fs": "0.0.2",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-filelog": "^0.4.1",
+    "gulp-insert": "^0.5.0",
+    "merge-stream": "^1.0.0",
+    "path": "^0.12.7"
+  }
+}

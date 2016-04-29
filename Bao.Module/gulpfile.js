@@ -1,4 +1,4 @@
-/// <binding BeforeBuild='compile-regions' />
+/// <binding AfterBuild='compile-regions' />
 
 // include plug-ins
 var gulp = require('gulp');
@@ -19,12 +19,12 @@ var config = {
 
 function getFolders(dir) {
     return fs.readdirSync(dir)
-      .filter(function (file) {
-          return fs.statSync(path.join(dir, file)).isDirectory();
-      })
-    .filter(function (file) {
-        return !file.match(config.reservedDirPattern);
-    });
+        .filter(function (file) {
+            return fs.statSync(path.join(dir, file)).isDirectory();
+        })
+        .filter(function (file) {
+            return !file.match(config.reservedDirPattern);
+        });
 }
 
 

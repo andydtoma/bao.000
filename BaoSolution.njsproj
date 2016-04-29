@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{d4dd9443-4fec-4b8e-b318-a1c90a3687cc}</ProjectGuid>
+    <ProjectHome />
+    <ProjectView>ShowAllFiles</ProjectView>
+    <StartupFile>
+    </StartupFile>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <EnableTypeScript>true</EnableTypeScript>
+    <TypeScriptSourceMap>true</TypeScriptSourceMap>
+    <TypeScriptModuleKind>CommonJS</TypeScriptModuleKind>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <ItemGroup>
+    <Content Include="commands.json" />
+    <Content Include="package.json" />
+    <Content Include="packages.config" />
+    <Content Include="README.md" />
+    <Compile Include="nodeinstalled.js" />
+    <Content Include="Bao.Core\commands.json" />
+    <Compile Include="Bao.Module\gulpfile.js" />
+    <Content Include="Bao.Core\obj\Debug\Bao.Core.csproj.FileListAbsolute.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Bao.Core" />
+    <Folder Include="Bao.Core\bin" />
+    <Folder Include="Bao.Core\bin\Debug" />
+    <Folder Include="Bao.Core\bin\Release" />
+    <Folder Include="Bao.Core\obj" />
+    <Folder Include="Bao.Core\obj\Debug" />
+    <Folder Include="Bao.Core\obj\Debug\TempPE" />
+    <Folder Include="Bao.Core\obj\Release" />
+    <Folder Include="Bao.Core\obj\Release\TempPE" />
+    <Folder Include="Bao.Core\Properties" />
+    <Folder Include="Bao.Module" />
+    <Folder Include="Bao.Module\BaoCredential" />
+    <Folder Include="Bao.Module\BaoService" />
+    <Folder Include="Bao.Module\bin" />
+    <Folder Include="Bao.Module\bin\Debug" />
+    <Folder Include="Bao.Module\obj" />
+    <Folder Include="Bao.Module\obj\Debug" />
+    <Folder Include="packages\" />
+    <Folder Include="packages\es6-promise.TypeScript.DefinitelyTyped.0.7.5\" />
+    <Folder Include="packages\es6-promise.TypeScript.DefinitelyTyped.0.7.5\Content\" />
+    <Folder Include="packages\es6-promise.TypeScript.DefinitelyTyped.0.7.5\Content\Scripts\" />
+    <Folder Include="packages\es6-promise.TypeScript.DefinitelyTyped.0.7.5\Content\Scripts\typings\" />
+    <Folder Include="packages\es6-promise.TypeScript.DefinitelyTyped.0.7.5\Content\Scripts\typings\es6-promise\" />
+    <Folder Include="typings\" />
+    <Folder Include="typings\del\" />
+    <Folder Include="typings\glob\" />
+    <Folder Include="typings\gulp-concat\" />
+    <Folder Include="typings\gulp\" />
+    <Folder Include="typings\merge-stream\" />
+    <Folder Include="typings\minimatch\" />
+    <Folder Include="typings\node\" />
+    <Folder Include="typings\orchestrator\" />
+    <Folder Include="typings\q\" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="packages\es6-promise.TypeScript.DefinitelyTyped.0.7.5\Content\Scripts\typings\es6-promise\es6-promise.d.ts" />
+    <TypeScriptCompile Include="Scripts\typings\es6-promise\es6-promise.d.ts" />
+    <TypeScriptCompile Include="typings\del\del.d.ts" />
+    <TypeScriptCompile Include="typings\glob\glob.d.ts" />
+    <TypeScriptCompile Include="typings\gulp-concat\gulp-concat.d.ts" />
+    <TypeScriptCompile Include="typings\gulp\gulp.d.ts" />
+    <TypeScriptCompile Include="typings\merge-stream\merge-stream.d.ts" />
+    <TypeScriptCompile Include="typings\minimatch\minimatch.d.ts" />
+    <TypeScriptCompile Include="typings\node\node.d.ts" />
+    <TypeScriptCompile Include="typings\orchestrator\orchestrator.d.ts" />
+    <TypeScriptCompile Include="typings\q\Q.d.ts" />
+    <TypeScriptCompile Include="typings\tsd.d.ts" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <!--Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them.-->
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="False" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsTools.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
